@@ -5,7 +5,7 @@ var webpack = require('webpack')
 module.exports = {
 	//file we want to put thru process into webpack 
 	//is value to the key entry
-	entry: './src/client.js',
+	entry: ['babel-polyfill', './src/client.js'],
 	//where do we want the bundle file to go
 	//is defined in output
 	output: { 
