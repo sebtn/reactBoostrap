@@ -10,32 +10,34 @@ module.exports = {
 	//is defined in output
 	output: { 
 		path: path.resolve(__dirname, 'public'),
-		filename: 'bundle.js'
+		//this file is referenced in index.html and it binds
+		//client.js -> index.js -> index.html
+		filename: 'index.js'
 	},
 	devServer: {
-		// inline: true,
+		inline: true,
 		contentBase: './public',
 		port: 3000
 	},
-// 	module: {
-// 		loaders: 
-// 		[
-// 			{
-// 				test:/\.js$/,
-// 				exclude:/(node_modules)/,
-// 				loader: 'babel-loader',
-// 				query: {
-// 					presets: ['es2015', 'react']
-// 				}
-// 			},	
-// 			{
-// 				test: /\.(jpg|png|jpeg)$/,
-// 				loader: 'url-loader?limit=50000'
-// 			},
-// 			{
-// 				test: /\.scss$/,
-// 				loader:'style-loader!css-loader!sass-loader'
-// 			},
-// 		]
-// 	}
+	module: {
+		loaders: 
+		[
+			{
+				test:/\.js$/,
+				exclude:/(node_modules)/,
+				loader: 'babel-loader',
+				query: {
+					presets: ['es2015', 'react']
+				}
+			}
+			// {
+			// 	test: /\.(jpg|png|jpeg)$/,
+			// 	loader: 'url-loader?limit=50000'
+			// },
+			// {
+			// 	test: /\.scss$/,
+			// 	loader:'style-loader!css-loader!sass-loader'
+			// },
+		]
+	}
 }
