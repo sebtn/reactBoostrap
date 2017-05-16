@@ -2,10 +2,11 @@ let React = require('react')
 let ReactDOM = require('react-dom')
 import Button from './bootstrap/button.js'
 import Jumbotron	from './bootstrap/jumbotron.js'
+import scss from './appsrc.scss'
  
 export default class App extends React.Component {
 	render(){
-		return <Jumbotron className="-fluid text-center" containerFluid={true}>
+		return <Jumbotron className="-fluid text-center addedClass" containerFluid={true}>
 				<h1>React User Interfaces</h1>		
 				<p>Sassy Bootstraped and all!</p>		
 				<p> <Button className="-primary -xl" href="https://v4-alpha.getbootstrap.com/" target="_blank" />		

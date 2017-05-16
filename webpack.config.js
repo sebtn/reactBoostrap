@@ -29,15 +29,15 @@ module.exports = {
 				query: {
 					presets: ['es2015', 'react']
 				}
+			},
+			{
+				test: /\.(jpg|png|jpeg)$/,
+				loader: 'url-loader?limit=50000'
+			},
+			{
+				test: /\.scss$/,
+				loader:'style-loader!css-loader!sass-loader'
 			}
-			// {
-			// 	test: /\.(jpg|png|jpeg)$/,
-			// 	loader: 'url-loader?limit=50000'
-			// },
-			// {
-			// 	test: /\.scss$/,
-			// 	loader:'style-loader!css-loader!sass-loader'
-			// },
 		]
 	}
 }
