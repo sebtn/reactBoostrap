@@ -4,12 +4,12 @@
 //bootstrap element 
 //and value = this.props.className 
 //do this:
-export function classify(key, value) {
+export function classify(key, value='') {
 	//if there is a dash at the first place of value
-	if(value[0] === '-')
+	if(value[0] === '-') value = key + value
 	//make value a sum	
-		value = key + value
+		value = value.split(' -').join(` ${key}-`)
 	//final string construction	
 	//look at strings literals to refactor the code
-	return key + ' ' + value.split(' -').join(' ' + key + '-')
+	return `${key} ${value}`
 }

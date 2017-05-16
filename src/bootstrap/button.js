@@ -1,7 +1,7 @@
 let React = require('react')
 //classify is a method inside utils.js
 //use {classify} to use only classify and no other method
-import {classify} from './utils.js'
+import {classify} from './utils'
 import './button.scss'
 
 export default class Button extends React.Component {
@@ -27,7 +27,7 @@ export default class Button extends React.Component {
 		//clasName is overriding this.props by being written to the right
 		//adding the disabled capability
 		const className = classify('btn', this.props.className) + 
-					(this.props.disabled? '-disabled':'')
-		return <Tag {...this.props} className={className}>DISCOVER!!</Tag>
+					(this.props.disabled? ' disabled':'')
+		return <Tag {...this.props} className={className}>{this.props.label || this.props.children}</Tag>
 	}
 }

@@ -14,15 +14,35 @@
 	height:100%;
 	width:100%;
 }
-
 $image: url(/img/koala.jpg);
 $text-color: white;
-
-
 .addedClass {
 	/*background:url('../public/img/koala.jpg') no-repeat;*/
 	/*background:url('../public/img/koala.jpg') no-repeat center center fixed;*/
 	/*background-image:$image ;*/
 	@include background-it($image);
 
+}
+.app-appear {
+	opacity:0.01;
+	&-active {
+		opacity:1;
+		transition: opacity 1.5s ease-in;
+	}	
+}
+
+.app-enter {
+	opacity:0.01;
+	&-active {
+		opacity:1;
+		transition: opacity 3s ease-in;
+	}	
+}
+
+.app-leave {
+	opacity:1;
+	&-active {
+		opacity:0;
+		transition: opacity 1.5s ease-in;
+	}	
 }
