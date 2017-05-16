@@ -1,12 +1,28 @@
-.addedClass {
-	/*background:url('../public/img/koala.jpg') no-repeat;*/
-	/*background:url('../public/img/koala.jpg') no-repeat center center fixed;*/
-	background:url('../public/img/koala.jpg') no-repeat center center fixed;
+/*another way to load bootstrap*/
+/*@import "../node_modules/bootstrap/scss/bootstrap";*/
+/*I want to import just parts of bootstrap*/
+/*@import "../node_modules/bootstrap/scss/bootstrap";*/
+
+
+@mixin background-it($path) {
+	background-image:$path;
+	color:white;
 	-webkit-background-size: cover; /* For WebKit*/
 	-moz-background-size: cover;    /* Mozilla*/
 	-o-background-size: cover;      /* Opera*/
 	background-size: cover;         /* Generic*/
 	height:100%;
 	width:100%;
-	color:white; 
+}
+
+$image: url(/img/koala.jpg);
+$text-color: white;
+
+
+.addedClass {
+	/*background:url('../public/img/koala.jpg') no-repeat;*/
+	/*background:url('../public/img/koala.jpg') no-repeat center center fixed;*/
+	/*background-image:$image ;*/
+	@include background-it($image);
+
 }

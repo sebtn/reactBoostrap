@@ -2,7 +2,8 @@ let React = require('react')
 let ReactDOM = require('react-dom')
 import Button from './bootstrap/button.js'
 import Jumbotron	from './bootstrap/jumbotron.js'
-import scss from './appsrc.scss'
+// import scss from './appsrc.scss'
+import  './appsrc.scss'
  
 export default class App extends React.Component {
 	render(){

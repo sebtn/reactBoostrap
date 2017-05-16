@@ -1,6 +1,7 @@
 let React = require('react')
 import Container from './container.js'
 import {classify} from './utils.js'
+import './jumbotron.scss'
 
 export default class Jumbotron extends React.Component {
 
