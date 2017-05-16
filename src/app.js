@@ -5,7 +5,7 @@ import Jumbotron	from './bootstrap/jumbotron.js'
  
 export default class App extends React.Component {
 	render(){
-		return <Jumbotron className="-fluid text-center">
+		return <Jumbotron className="-fluid text-center" containerFluid={true}>
 				<h1>React User Interfaces</h1>		
 				<p>Sassy Bootstraped and all!</p>		
 				<p> <Button className="-primary -xl" href="https://v4-alpha.getbootstrap.com/" target="_blank" />		

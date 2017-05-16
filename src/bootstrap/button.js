@@ -1,7 +1,6 @@
 let React = require('react')
 //classify is a method inside utils.js
-//use {classify} to use only classify and no other
-//method
+//use {classify} to use only classify and no other method
 import {classify} from './utils.js'
 
 export default class Button extends React.Component {

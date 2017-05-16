@@ -1,7 +1,7 @@
 {
-  "name": "reactbootstrped",
+  "name": "reactbootstraped",
   "version": "1.0.0",
-  "description": "React using bootstrap tmaplte",
+  "description": "React using bootstrap template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
